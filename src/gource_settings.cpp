@@ -940,8 +940,8 @@ void GourceSettings::importGourceSettings(ConfFile& conffile, ConfSection* gourc
 
         filename_time = entry->getFloat();
 
-        if(filename_time<2.0f) {
-            conffile.entryException(entry, "filename-time must be >= 2.0");
+        if(filename_time<0.5f) {
+            conffile.entryException(entry, "filename-time must be >= 0.5");
         }
     }
 
